@@ -1,0 +1,484 @@
+
+									#stepb {
+										display: none;
+									}
+
+									#stepb.showIt {
+										display: block;
+									}
+
+									div#gfield_description_3_32 {
+										padding-top: 5px;
+										font-size: 11px;
+										color: red;
+										display: none;
+									}
+
+									div#gfield_description_3_32.badNumber {
+										display: block;
+									}
+
+									.img1,
+									.img2,
+									.img3 {
+										display: block;
+									}
+
+									.img1.noShow,
+									.img2.noShow,
+									.img3.noShow {
+										display: none;
+									}
+
+									.titleBlue {
+										color: #57d7ff;
+										font-family: "Poppins", Sans-serif;
+										font-weight: 300;
+										text-transform: uppercase;
+										font-size: 1.75rem;
+										text-align: center;
+										display: block;
+									}
+
+									.titleHeavy {
+										color: #000;
+										font-family: "Poppins", Sans-serif;
+										font-size: 3em;
+										font-weight: 800;
+										text-transform: uppercase;
+									}
+
+									.titleThin {
+										color: #000;
+										font-family: "Poppins", Sans-serif;
+										font-size: 2.5em;
+										font-weight: 900;
+										text-transform: uppercase;
+										text-align: center;
+										display: block;
+										margin-bottom: 25px;
+										line-height: 1em;
+									}
+
+									#gform_3 input[type=text],
+									#gform_3 input[type=number],
+									#gform_3 input[type=email],
+									#gform_3 #input_3_32,
+									#gform_3 select {
+										padding: 25px !important;
+										font-size: 18px !important;
+										border-radius: 10px !important;
+										border: none !important;
+									}
+
+									#gform_3 .gform_page_footer .gform_next_button,
+									#gform_submit_button_3 {
+										font-family: "Poppins", Sans-serif;
+										font-size: 1.5em !important;
+										font-weight: 600 !important;
+										background-color: #f802bf;
+										border-radius: 30px;
+										padding: 1em 1em !important;
+										color: #fff;
+										margin-top: 25px;
+										width: 100%;
+										background: rgb(248, 2, 191);
+										text-transform: uppercase;
+									}
+
+									span.para {
+										font-size: 16px;
+										font-weight: 500;
+										color: darkgrey;
+										text-align: center;
+										display: block;
+									}
+
+									.gform_previous_button {
+										display: none;
+									}
+
+									#gform_3 select {
+										border: solid 1px;
+									}
+
+									fieldset#field_3_22 input {
+										position: absolute;
+										left: -100000px;
+										opacity: 0;
+									}
+
+									fieldset#field_3_22,
+									fieldset#field_3_46,
+									fieldset#field_3_50 {
+										margin: 0 auto;
+										display: block;
+										text-align: center;
+										width: 100%;
+									}
+
+									fieldset#field_3_46 label,
+									fieldset#field_3_50 label {
+										padding: 20px 10px;
+										box-shadow: 0px 0px 15px #00000014;
+										border-radius: 10px;
+										border: solid 2px #80808075;
+										transition: .4s;
+										background: white;
+									}
+
+									fieldset#field_3_22 span,
+									fieldset#field_3_46 span,
+									fieldset#field_3_50 span {
+										font-weight: 700;
+										font-size: 17px;
+										margin-top: 17px;
+										display: block;
+									}
+
+									input:checked~label {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+									}
+
+									fieldset#field_3_22 label:hover,
+									fieldset#field_3_46 label:hover,
+									fieldset#field_3_50 label:hover {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+										transform: scale(1.05);
+										cursor: pointer;
+									}
+
+									fieldset#field_3_23 .gchoice {
+										width: 24% !important;
+										display: inline-block !important;
+										margin-bottom: 25px;
+									}
+
+									fieldset#field_3_22 .gchoice {
+										width: 30% !important;
+										display: inline-block !important;
+										margin-bottom: 25px;
+									}
+
+									fieldset#field_3_23 input,
+									fieldset#field_3_46 input,
+									fieldset#field_3_50 input {
+										position: absolute;
+										left: -100000px;
+										opacity: 0;
+									}
+
+									fieldset#field_3_23,
+									fieldset#field_3_46,
+									fieldset#field_3_50 {
+										margin: 0 auto;
+										display: block;
+										text-align: center;
+										width: 100%;
+									}
+
+									fieldset#field_3_23 label,
+									fieldset#field_3_22 label {
+										padding: 0px 0px 20px 0px;
+										box-shadow: 0px 0px 15px #00000014;
+										border-radius: 10px;
+										border: solid 2px #80808075;
+										transition: .4s;
+										background: white;
+										max-width: calc(100% - 5px);
+									}
+
+									fieldset#field_3_23 label img {
+										border-radius: 10px 10px 0px 0px;
+									}
+
+									div#input_3_21 img {
+										width: 170px;
+									}
+
+									fieldset#field_3_23 span,
+									fieldset#field_3_46 span,
+									fieldset#field_3_50 span {
+										font-weight: 700;
+										font-size: 16px;
+										margin-top: 10px;
+										display: block;
+									}
+
+									input:checked~label {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+									}
+
+									fieldset#field_3_23 label:hover,
+									fieldset#field_3_46 label:hover,
+									fieldset#field_3_50 label:hover {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+										transform: scale(1.05);
+										cursor: pointer;
+									}
+
+									fieldset#field_3_46 .gchoice,
+									fieldset#field_3_50 .gchoice {
+										width: 46%;
+										display: inline-block;
+									}
+
+									#field_3_46 img,
+									#field_3_50 img {
+										width: 65%;
+									}
+
+									fieldset#field_3_21 .gchoice {
+										width: 49% !important;
+										display: inline-block !important;
+									}
+
+									fieldset#field_3_21 input {
+										position: absolute;
+										left: -100000px;
+										opacity: 0;
+									}
+
+									fieldset#field_3_21 {
+										margin: 0 auto;
+										display: block;
+										text-align: center;
+										width: 100%;
+									}
+
+									fieldset#field_3_21 label {
+										padding: 20px 10px;
+										box-shadow: 0px 0px 15px #00000014;
+										border-radius: 10px;
+										border: solid 2px #80808075;
+										transition: .4s;
+										background: white;
+									}
+
+									fieldset#field_3_21 span {
+										font-weight: 700;
+										font-size: 17px;
+										margin-top: 17px;
+										display: block;
+									}
+
+									input:checked~label {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+									}
+
+									fieldset#field_3_21 label:hover {
+										box-shadow: 0px 0px 15px #0000003b;
+										transition: .4s;
+										border: solid 2px #6bdbff !important;
+										transform: scale(1.05);
+										cursor: pointer;
+									}
+
+									span.gfield_required.gfield_required_text {
+										display: none;
+									}
+
+									label.gfield_label {
+										font-weight: 700 !important;
+										font-size: 15px !important;
+									}
+
+									input#input_3_10 {
+										width: 50%;
+										margin: 0 auto;
+										display: block;
+									}
+
+									div#mapHouse {
+										height: 550px;
+										border-radius: 50px;
+										border: solid white 10px;
+										box-shadow: -10px 10px 25px #bfbfbf;
+										webkit-border-radius: 50px;
+										-moz-border-radius: 50px;
+									}
+
+									fieldset#field_3_23 label img {
+										width: 65%;
+										padding-top: 11px;
+									}
+
+									fieldset#field_3_22 img {
+										width: 75%;
+									}
+
+									.noUi-connect {
+										background: #57d7ff !important;
+										border-radius: 25px !important;
+									}
+
+									.noUi-connects {
+										border-radius: 25px !important;
+									}
+
+									.noUi-base {
+										border-radius: 25px !important;
+									}
+
+									div#gsfslider_47 {
+										border-radius: 25px !important;
+										height: 30px !important;
+										margin-top: 1.5em !important;
+									}
+
+									.noUi-horizontal .noUi-handle {
+										height: 40px !important;
+										border-radius: 25px !important;
+										width: 40px !important;
+									}
+
+									.noUi-handle:after,
+									.noUi-handle:before {
+										top: 12px !important;
+										left: 21px !important;
+										width: 1px !important;
+									}
+
+									.noUi-handle:after {
+										left: 16px !important;
+									}
+
+									.noUi-tooltip {
+										font-family: 'Poppins' !important;
+										font-weight: 600 !important;
+									}
+
+									.partnerNameA {
+										text-transform: capitalize;
+									}
+
+									p.consentText {
+										font-size: 10px;
+										margin-top: 10px;
+										padding: 0px 0px;
+										text-align: center;
+										color: #616161;
+										font-style: italic;
+										line-height: 13px;
+									}
+
+									p.consentText a {
+										color: inherit;
+										font-weight: 600;
+									}
+
+									fieldset#field_3_22 span {
+										margin-top: 5px;
+									}
+
+									fieldset#field_3_22 label {
+										padding-top: 15px !important;
+									}
+
+									@media(max-width:750px) {
+										.noUi-tooltip {
+											display: block !important;
+											font-size: 14px;
+										}
+
+										div#mapHouse {
+											height: 250px;
+										}
+
+										.titleBlue {
+											font-size: 1.2rem;
+										}
+
+										.titleThin {
+											font-size: 22px;
+											margin-bottom: 25px;
+										}
+
+										input#input_3_10 {
+											width: 100%;
+											margin: 0 auto;
+											display: block;
+										}
+
+										#gform_3 .gform_page_footer .gform_next_button {
+											padding: 10px !important;
+											font-size: 18px !important;
+											margin-bottom: 25px;
+										}
+
+										#gform_submit_button_3 {
+											padding: .4em !important;
+											font-size: 1.25em !important;
+											width: 96%;
+										}
+
+										fieldset#field_3_22 .gchoice {
+											width: 49% !important;
+											display: inline-block;
+											margin-bottom: 30px;
+										}
+
+										fieldset#field_3_23 .gchoice,
+										fieldset#field_3_46 .gchoice,
+										fieldset#field_3_50 .gchoice {
+											width: 49% !important;
+											display: inline-block !important;
+											margin-bottom: 25px;
+										}
+
+										fieldset#field_3_21 .gchoice {
+											width: 100% !important;
+											display: inline-block !important;
+											margin-bottom: 25px;
+										}
+
+										#gform_3 input[type=text],
+										#gform_3 input[type=number],
+										#gform_3 input[type=email],
+										#gform_3 #input_3_32,
+										#gform_3 select {
+											padding: 9px !important;
+											font-size: 15px !important;
+											border-radius: 10px !important;
+											border: none !important;
+										}
+
+										fieldset#field_3_22 label {
+											padding: 10px 10px;
+										}
+
+										.pillBox img {
+											width: 100%;
+										}
+
+										fieldset#field_3_23 .gchoice .pillBox img,
+										{
+										width: 50%;
+									}
+
+									fieldset#field_3_46 .gchoice .pillBox img,
+									fieldset#field_3_50 .gchoice .pillBox img {
+										width: 100%;
+									}
+
+									#gform_3 div#gform_fields_3_4 input {
+										padding: 10px !important;
+									}
+
+									@supports (-webkit-touch-callout:none) {
+										div#mapHouse {
+											border-radius: 0px;
+										}
+									}
+									}
+							
