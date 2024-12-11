@@ -13,6 +13,8 @@ use App\Models\User;
 use App\Models\Webelieve;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
+
 class WebSiteController extends Controller
 {
 
@@ -40,6 +42,28 @@ class WebSiteController extends Controller
             
             session(['form_payment' => request('payment')]);
             session(['steps' => 'detail']);
+        }
+
+        if (request('phone')) {
+            
+            session(['form_detail' => request('phone')]);
+
+            $total_payment = request('payment') / 2.85;
+
+            session(['form_toal_payment' => $total_payment]);
+
+            Session::forget('personal_detail');
+
+            $fields = [
+                'firstname', 'lastname', 'phone', 'email', 
+                'systemsize', 'offset', 'monthlybill', 'annualusage'
+            ];
+            
+            foreach ($fields as $field) {
+                Session::push('personal_detail', request($field));
+            }
+
+            session(['steps' => 'proposal']);
         }
 
         return view('welcome');

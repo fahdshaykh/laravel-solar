@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Wizard-v2</title>
+	<title>Solar Cost Calculator</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -60,26 +60,100 @@
                 border-radius: 10px;
             }
         }
+
+
+        /* invoice page design */
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .customer-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .customer-info .customer-note {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .address,
+        .payment-details {
+            width: 30%;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .order-summary {
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .order-item img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .order-item .price {
+            font-weight: bold;
+            color: red;
+        }
+
+        .order-totals {
+            text-align: right;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 	<div class="page-content" style="background-image: url('{{asset('frontend/images/wizard-v2-bg.jpg')}}')">
 		<div class="wizard-v2-content">
-			<div class="wizard-image">
-			</div>
+			<!-- <div class="wizard-image">
+			</div> -->
 			<div class="wizard-form">
 				<div class="wizard-header">
-					<h3>Form Wizard</h3>
-					<p>Nostrud exercitation commodo consequat.</p>
+					<h3>Your Solar Cost</h3>
+					<p>Lets find out in minutes</p>
 				</div>
 		        <form class="form-register" action="{{route('finance')}}" method="get">
 		        	<div id="form-total">
 		        		<!-- SECTION 1 -->
-			            <h2>Give Address</h2>
-
-                       
 
                         @if(session('steps') === 'address')
+                        <h4>Address</h4>
+
 			            <section>
 			                <div class="inner">
 								<div class="row">
@@ -91,6 +165,8 @@
 							</div>
 			            </section>
                         @elseif (session('steps') === 'payment')
+                        <h4>Payment</h4>
+
                         <section>
 			                <div class="inner">
 								<div class="row">
@@ -102,6 +178,8 @@
 							</div>
 			            </section>
                         @elseif (session('steps') === 'detail')
+                        <h4>Personal Detail</h4>
+
                         <section>
                         <input type="hidden" name="address" value="{{ session('form_address') }}" class="form-control" id="first_name">
                         <input type="hidden" name="payment" value="{{ session('form_payment') }}" class="form-control" id="first_name">
@@ -114,6 +192,7 @@
 										<input type="text" name="lastname" placeholder="Last Name" class="form-control" id="last_name">
 									</div>
 								</div>
+                                
 								<div class="form-row">
 									<div class="form-holder">
 										<input type="text" name="phone" placeholder="Phone Number" class="form-control" id="phone">
@@ -122,11 +201,93 @@
 										<input type="email" name="email" placeholder="Email" class="form-control" id="email">
 									</div>
 								</div>
+                                
+                                <div class="form-row">
+									<div class="form-holder">
+										<input type="text" name="systemsize" placeholder="system size" class="form-control" id="systemsize">
+									</div>
+									<div class="form-holder">
+										<input type="text" name="offset" placeholder="Offset" class="form-control" id="offset">
+									</div>
+								</div>
+
+                                <div class="form-row">
+									<div class="form-holder">
+										<input type="text" name="monthlybill" placeholder="Monthly Bill" class="form-control" id="monthlybill">
+									</div>
+									<div class="form-holder">
+										<input type="text" name="annualusage" placeholder="Annual Usage" class="form-control" id="annualusage">
+									</div>
+								</div>
 							</div>
 			            </section>
+
+                        @elseif (session('steps') === 'proposal')
+                        <h4>Check Out Your Free Solar Estimate!</h4>
+
+                        @php
+                            $details = Session::get('personal_detail');
+                        @endphp
+
+                        <!-- <section>
+                            
+                            @foreach ($details as $row)
+                                <P> {{ $row }} </P>
+                            @endforeach
+			                
+			            </section> -->
+
+                        <div class="container">
+                            <header>
+                                <!-- <img src="logo.png" alt="Peak Logo" class="logo"> -->
+                                <!-- <h1>ORDER CONFIRMATION</h1> -->
+                            </header>
+
+                            <section class="customer-info">
+                                <p class="customer-note">Proposal Detail</p>
+                                <p>Tailor made for you using a flat-rate to save you money!</p>
+                            </section>
+
+                            <section class="order-details">
+                                <div class="address">
+                                    <h3>User Detail</h3>
+                                    <p>{{ $details['0'] }} {{ $details['1'] }}</p>
+                                    <p>{{ $details['2'] }}</p>
+                                    <p>{{ $details['3'] }}</p>
+                                    <p>{{ $details['4'] }}</p>
+                                </div>
+                                <div class="address">
+                                    <h3>DELIVERY ADDRESS</h3>
+                                    <p>{{ $details['0'] }} {{ $details['1'] }}</p>
+                                    <p>{{ session('form_address') }}</p>
+                                </div>
+                                <div class="payment-details">
+                                    <h3>PAYMENT DETAILS</h3>
+                                    <p>Invoice</p>
+                                    <p class="price">${{ session('form_toal_payment') }}</p>
+                                </div>
+                            </section>
+
+                            <section class="order-summary">
+                                <p>Order number: 00000000 | Date: 05.06.2013</p>
+                                <div class="order-item">
+                                    <img src="jacket.png" alt="Down Jacket Lhotse II">
+                                    <div>
+                                        <p>DOWN JACKET LHOTSE II</p>
+                                        <p class="price">${{ session('form_toal_payment') }}</p>
+                                    </div>
+                                </div>
+                                <div class="order-totals">
+                                    <p>TOTAL $000.00</p>
+                                </div>
+                            </section>
+                        </div>
+
                         @endif
 						
-			            <button type="submit" class="btn btn-primary mt-3">Continue</button>
+                        @if(session('steps') !== 'proposal')
+                            <button type="submit" class="btn btn-primary mt-3">Continue</button>
+                        @endif
 			            
 		        	</div>
 		        </form>
